@@ -10,4 +10,8 @@ router.get('/store', function(req, res, next) {
   res.redirect('http://greatdeals.' + req.hostname);
 });
 
+router.get('/instructions', function(req, res) {
+  res.render('instructions', { title: 'Instructions'})
+});
+
 module.exports = router;

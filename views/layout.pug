@@ -20,6 +20,9 @@ html(lang='en')
           a(href='/', aria-selected=true, id='home-link').mdc-list-item
             i(aria-hidden=true, style='color:white').material-icons.mdc-list-item__graphic home
             span.mdc-list-item__text(style='color:white') Home
+          a(href='/instructions', id='instructions-link').mdc-list-item
+            i(aria-hidden=true, style='color:white').material-icons.mdc-list-item__graphic chrome_reader_mode
+            span.mdc-list-item__text(style='color:white') Instructions
           a(href='/store', aria-selected=true, id='download-link').mdc-list-item
             i(aria-hidden=true, style='color:white').material-icons.mdc-list-item__graphic store
             span.mdc-list-item__text(style='color:white') Great Deals Store
@@ -30,8 +33,10 @@ html(lang='en')
           section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
             a.material-icons.mdc-top-app-bar__navigation-icon menu
             span(style='cursor: default').mdc-top-app-bar__title
-              img(src='/images/Logo.png', width=140, height=55)
+              img(src='/images/Silverplate-Wide.png', width=280, height=50)
       main.main-content
         div.mdc-top-app-bar--fixed-adjust.container
           block content
+
+        block fullcontent
   script(type="text/javascript", src='/javascripts/layout.js')

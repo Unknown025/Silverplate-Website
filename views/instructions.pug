@@ -1,0 +1,13 @@
+extends layout
+
+block head
+    meta(name="description", content="Silverplate instructions for using the CAD demo.")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="Silverplate Demo Instructions")
+    meta(property="og:image", content="https://silverplate.ga/images/Logo-dark.png")
+    meta(property="og:url", content="https://silverplate.ga/instructions")
+    meta(property="og:description", content="Silverplate instructions for using the CAD demo.")
+
+block fullcontent
+    object(data='/Phase_One.pdf', type='application/pdf', style='width: 100%; height: 93vh')
+        embed(src='/Phase_One.pdf', type='application/pdf')

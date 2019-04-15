@@ -1,4 +1,16 @@
 extends layout
 
+block head
+  meta(name="description", content="Silverplate | Homepage for the Silverplate CAD education startup.")
+  meta(property="og:type", content="website")
+  meta(property="og:title", content="Silverplate | Home")
+  meta(property="og:image", content="https://silverplate.ga/images/Logo-dark.png")
+  meta(property="og:url", content="https://silverplate.ga/")
+  meta(property="og:description", content="Silverplate | Homepage for the Silverplate CAD education startup.")
+
 block content
-  p Welcome to Silverplate's homepage.
+  h1 Welcome to Silverplate's homepage.
+  p Download our project files to try them out!
+  button.mdc-button.mdc-button--outlined(onclick='location.assign(\'/SilverplateEd.zip\')', style='text-transform: none')
+    i.material-icons.mdc-button__icon file_download
+    span.mdc-button__label Download SilverplateEd.zip

@@ -11,6 +11,7 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
 
 const homeLink = document.getElementById('home-link');
 const downloadLink = document.getElementById('download-link');
+const instructionLink = document.getElementById('instructions-link');
 const adminLink = document.getElementById('admin-link');
 const loginLink = document.getElementById('login-link');
 const logoutLink = document.getElementById('logout-link');
@@ -34,6 +35,8 @@ if(cLocation === '/downloads') {
     homeLink.classList.add('mdc-list-item--activated');
 } else if(cLocation === '/login') {
     loginLink.classList.add('mdc-list-item--activated');
+} else if(cLocation === '/instructions') {
+    instructionLink.classList.add('mdc-list-item--activated');
 }
 
 /* Register service worker if applicable. */
