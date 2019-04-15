@@ -1,7 +1,37 @@
 doctype html
-html
+html(lang='en')
   head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='theme-color', content='#283593')
     title= title
+    link(rel='stylesheet', href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500')
+    link(rel='manifest', href='/manifest.json')
+    script(type="text/javascript", src='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js')
+    script(type="text/javascript", src='https://www.google-analytics.com/analytics.js', async)
+
+    block head
   body
-    block content
+    aside.mdc-drawer.mdc-drawer--dismissible.sidebar
+      div.mdc-drawer__content
+        div.mdc-list
+          a(href='/', aria-selected=true, id='home-link').mdc-list-item
+            i(aria-hidden=true, style='color:white').material-icons.mdc-list-item__graphic home
+            span.mdc-list-item__text(style='color:white') Home
+          a(href='/store', aria-selected=true, id='download-link').mdc-list-item
+            i(aria-hidden=true, style='color:white').material-icons.mdc-list-item__graphic store
+            span.mdc-list-item__text(style='color:white') Great Deals Store
+
+    div.mdc-drawer-app-content
+      header.mdc-top-app-bar.app-bar(style='background-color: #283593', id='app-bar')
+        div.mdc-top-app-bar__row
+          section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
+            a.material-icons.mdc-top-app-bar__navigation-icon menu
+            span(style='cursor: default').mdc-top-app-bar__title
+              img(src='/images/Logo.png', width=140, height=55)
+      main.main-content
+        div.mdc-top-app-bar--fixed-adjust.container
+          block content
+  script(type="text/javascript", src='/javascripts/layout.js')

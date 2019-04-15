@@ -1,8 +1,29 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0;
+  font-family: 'Roboto', Fallback, sans-serif;
+  background-color: #2d2d2d;
+  color: white;
 }
 
-a {
-  color: #00B7FF;
+:root {
+  --mdc-theme-primary: #00ffff;
+  --mdc-theme-secondary: #283593;
+  --mdc-theme-on-primary: white;
+  --mdc-theme-on-secondary: white;
+  --mdc-theme-background: #2d2d2d;
+}
+
+.sidebar {
+  background-color: #404040;
+  color: white;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
