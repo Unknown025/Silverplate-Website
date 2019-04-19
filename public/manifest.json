@@ -3,8 +3,8 @@
   "name": "Silverplate Site",
   "icons": [],
   "start_url": "/",
-  "background_color": "#283593",
+  "background_color": "#1c5d24",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#283593"
+  "theme_color": "#1c5d24"
 }

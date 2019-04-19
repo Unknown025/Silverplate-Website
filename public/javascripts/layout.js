@@ -10,31 +10,14 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
 });
 
 const homeLink = document.getElementById('home-link');
-const downloadLink = document.getElementById('download-link');
+const storeLink = document.getElementById('store-link');
 const instructionLink = document.getElementById('instructions-link');
-const adminLink = document.getElementById('admin-link');
-const loginLink = document.getElementById('login-link');
-const logoutLink = document.getElementById('logout-link');
-
-if(getCookie('jwt') !== null) {
-    loginLink.style.display = "none";
-    logoutLink.style.display = null;
-    Notification.requestPermission()
-        .then((status) => {
-            console.debug('Notifications: ' + status);
-        });
-    if(parseJwt(getCookie('jwt')).admin) {
-        adminLink.style.display = null;
-    }
-}
 
 const cLocation = window.location.pathname.toLowerCase();
-if(cLocation === '/downloads') {
-    downloadLink.classList.add('mdc-list-item--activated');
+if(location.hostname.includes('greatdeals.')) {
+    storeLink.classList.add('mdc-list-item--activated');
 } else if(cLocation === '/') {
     homeLink.classList.add('mdc-list-item--activated');
-} else if(cLocation === '/login') {
-    loginLink.classList.add('mdc-list-item--activated');
 } else if(cLocation === '/instructions') {
     instructionLink.classList.add('mdc-list-item--activated');
 }
